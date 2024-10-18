@@ -66,8 +66,8 @@ int main() {
         densidadePopulacional2 = populacao2 / area2;
 
         //cálculo do PIB per capta
-        pibPerCapta1 = (pib1 * 100) / populacao1;
-        pibPerCapta2 = (pib2 * 100) / populacao2;
+        pibPerCapta1 = (pib1 * 1000000) / populacao1;
+        pibPerCapta2 = (pib2 * 1000000) / populacao2;
 
         //menu de comparação dos atributos das cartas:
         printf(" \n-- COMPARANDO AS CARTAS! -- \n");
@@ -119,8 +119,8 @@ int main() {
                 resultadoComparacao = soma1 > soma2 ? 1 : 0;
             } else if (atributo2 == 6) {
                 printf("Você escolheu as opções POPULAÇÃO e PIB PER CAPTA:\n");
-                printf("%s - População: %d habitantes - PIB per capta: %.3f mil reais/habitantes \n", cidade1, populacao1, pibPerCapta1);
-                printf("%s - População: %d habitantes - PIB per capta: %.3f mil reais/habitantes \n", cidade2, populacao2, pibPerCapta2);
+                printf("%s - População: %d habitantes - PIB per capta: %.2f reais/habitantes \n", cidade1, populacao1, pibPerCapta1);
+                printf("%s - População: %d habitantes - PIB per capta: %.2f reais/habitantes \n", cidade2, populacao2, pibPerCapta2);
                 soma1 = populacao1 + pibPerCapta1;
                 soma2 = populacao2 + pibPerCapta2;
                 resultadoComparacao = soma1 > soma2 ? 1 : 0;
@@ -161,8 +161,8 @@ int main() {
                 resultadoComparacao = soma1 > soma2 ? 1 : 0;
             } else if (atributo2 == 6) {
                 printf("Você escolheu as opções ÁREA e PIB PER CAPTA: \n");
-                printf("%s - Área: %.2f km2 - PIB per capta: %.3f mil reais/habitantes \n", cidade1, area1, pibPerCapta1);
-                printf("%s - Área: %.2f km2 - PIB per capta: %.3f mil reais/habitantes \n", cidade2, area2, pibPerCapta2);
+                printf("%s - Área: %.2f km2 - PIB per capta: %.2f reais/habitantes \n", cidade1, area1, pibPerCapta1);
+                printf("%s - Área: %.2f km2 - PIB per capta: %.2f reais/habitantes \n", cidade2, area2, pibPerCapta2);
                 soma1 = area1 + pibPerCapta1;
                 soma2 = area2 + pibPerCapta2;
                 resultadoComparacao = soma1 > soma2 ? 1 : 0;
@@ -203,8 +203,8 @@ int main() {
                 resultadoComparacao = soma1 > soma2 ? 1 : 0;
             } else if (atributo2 == 6) {
                 printf("Você escolheu as opções PIB e PIB PER CAPTA: \n");
-                printf("%s - PIB: %.3f milhões - PIB per capta: %.3f mil reais/habitantes\n", cidade1, pib1, pibPerCapta1);
-                printf("%s - PIB: %.3f milhões - PIB per capta: %.3f mil reais/habitantes\n", cidade2, pib2, pibPerCapta2);
+                printf("%s - PIB: %.3f milhões - PIB per capta: %.2f reais/habitantes\n", cidade1, pib1, pibPerCapta1);
+                printf("%s - PIB: %.3f milhões - PIB per capta: %.2f reais/habitantes\n", cidade2, pib2, pibPerCapta2);
                 soma1 = pib1 + pibPerCapta1;
                 soma2 = pib2 + pibPerCapta2;
                 resultadoComparacao = soma1 > soma2 ? 1 : 0;
@@ -246,8 +246,8 @@ int main() {
                 resultadoComparacao = soma1 > soma2 ? 1 : 0;
             } else if (atributo2 == 6) {
                 printf("Você escolheu as opções PONTOS TURÍSTICOS e PIB PER CAPTA: \n");
-                printf("%s - Pontos Turísticos: %d pontos - PIB per capta: %.3f mil reais/habitantes \n", cidade1, pontosTuristicos1, pibPerCapta1);
-                printf("%s - Pontos Turísticos: %d pontos - PIB per capta: %.3f mil reais/habitantes \n", cidade2, pontosTuristicos2, pibPerCapta2);
+                printf("%s - Pontos Turísticos: %d pontos - PIB per capta: %.2f reais/habitantes \n", cidade1, pontosTuristicos1, pibPerCapta1);
+                printf("%s - Pontos Turísticos: %d pontos - PIB per capta: %.2f reais/habitantes \n", cidade2, pontosTuristicos2, pibPerCapta2);
                 soma1 = pontosTuristicos1 + pibPerCapta1;
                 soma2 = pontosTuristicos2 + pibPerCapta2;
                 resultadoComparacao = soma1 > soma2 ? 1 : 0;
@@ -288,8 +288,8 @@ int main() {
                 printf("Opção inválida! Você deve escolher dois atributos diferentes para comparação!\n");
             } else if (atributo2 == 6) {
                 printf("Você escolheu as opções DENSIDADE POPULACIONAL e PIB PER CAPTA: \n");
-                printf("%s - Densidade Populacional: %.0f habitantes/km2 - PIB per capta: %.3f mil reais/habitantes \n", cidade1, densidadePopulacional1, pibPerCapta1);
-                printf("%s - Densidade Populacional: %.0f habitantes/km2 - PIB per capta: %.3f mil reais/habitantes \n", cidade2, densidadePopulacional2, pibPerCapta2);
+                printf("%s - Densidade Populacional: %.0f habitantes/km2 - PIB per capta: %.2f reais/habitantes \n", cidade1, densidadePopulacional1, pibPerCapta1);
+                printf("%s - Densidade Populacional: %.0f habitantes/km2 - PIB per capta: %.2f reais/habitantes \n", cidade2, densidadePopulacional2, pibPerCapta2);
                 soma1 = densidadePopulacional1 + pibPerCapta1;
                 soma2 = densidadePopulacional2 + pibPerCapta2;
                 resultadoComparacao = soma1 > soma2 ? 1 : 0;
@@ -300,33 +300,33 @@ int main() {
         case 6: //comparação PIB per capta X demais atributos
             if (atributo2 == 1) {
                 printf("Você escolheu as opções PIB PER CAPTA e POPULAÇÃO: \n");
-                printf("%s - PIB per capta: %.3f mil reais/habitantes - População: %d habitantes \n", cidade1, pibPerCapta1, populacao1);
-                printf("%s - PIB per capta: %.3f mil reais/habitantes - População: %d habitantes \n", cidade2, pibPerCapta2, populacao2);
+                printf("%s - PIB per capta: %.2f reais/habitantes - População: %d habitantes \n", cidade1, pibPerCapta1, populacao1);
+                printf("%s - PIB per capta: %.2f reais/habitantes - População: %d habitantes \n", cidade2, pibPerCapta2, populacao2);
                 soma1 = pibPerCapta1 + populacao1;
                 soma2 = pibPerCapta2 + populacao2;
                 resultadoComparacao = soma1 > soma2 ? 1 : 0;
             } else if (atributo2 == 2) {
                 printf("Você escolheu as opções PIB PER CAPTA e ÁREA: \n");
-                printf("%s - PIB per capta: %.3f mil reais/habitantes - Área: %.2f km2 \n", cidade1, pibPerCapta1, area1);
-                printf("%s - PIB per capta: %.3f mil reais/habitantes - Área: %.2f km2 \n", cidade2, pibPerCapta2, area2);
+                printf("%s - PIB per capta: %.2f reais/habitantes - Área: %.2f km2 \n", cidade1, pibPerCapta1, area1);
+                printf("%s - PIB per capta: %.2f reais/habitantes - Área: %.2f km2 \n", cidade2, pibPerCapta2, area2);
                 soma1 = pibPerCapta1 + area1;
                 soma2 = pibPerCapta2 + area2;
             } else if (atributo2 == 3) {
                 printf("Você escolheu as opções PIB PER CAPTA e PIB: \n");
-                printf("%s - PIB per capta: %.3f mil reais/habitantes - PIB: %.3f milhões de reais \n", cidade1, pibPerCapta1, pib1);
-                printf("%s - PIB per capta: %.3f mil reais/habitantes - PIB: %.3f milhões de reais \n", cidade2, pibPerCapta2, pib2);
+                printf("%s - PIB per capta: %.2f reais/habitantes - PIB: %.3f milhões de reais \n", cidade1, pibPerCapta1, pib1);
+                printf("%s - PIB per capta: %.2f reais/habitantes - PIB: %.3f milhões de reais \n", cidade2, pibPerCapta2, pib2);
                 soma1 = pibPerCapta1 + pib1;
                 soma2 = pibPerCapta2 + pib2;
             } else if (atributo2 == 4) {
                 printf("Você escolheu as opções PIB PER CAPTA e PONTOS TURÍSTICOS: \n");
-                printf("%s - PIB per capta: %.3f mil reais/habitantes - Pontos Turísticos: %d pontos \n", cidade1, pibPerCapta1, pontosTuristicos1);
-                printf("%s - PIB per capta: %.3f mil reais/habitantes - Pontos turísticos: %d pontos \n", cidade2, pibPerCapta2, pontosTuristicos2);
+                printf("%s - PIB per capta: %.2f reais/habitantes - Pontos Turísticos: %d pontos \n", cidade1, pibPerCapta1, pontosTuristicos1);
+                printf("%s - PIB per capta: %.2f reais/habitantes - Pontos turísticos: %d pontos \n", cidade2, pibPerCapta2, pontosTuristicos2);
                 soma1 = pibPerCapta1 + pontosTuristicos1;
                 soma2 = pibPerCapta2 + pontosTuristicos2;
             } else if (atributo2 == 5) {
                 printf("Você escolheu as opções PIB PER CAPTA e DENSIDADE POPULACIONAL: \n");
-                printf("%s - PIB per capta: %.3f mil reais/habitantes - Densidade Populacional: %.0f habitantes/km2 \n", cidade1, pibPerCapta1, densidadePopulacional1);
-                printf("%s - PIB per capta: %.3f mil reais/habitantes - Densidade Populacional: %.0f habitantes/km2 \n", cidade2, pibPerCapta2, densidadePopulacional2);
+                printf("%s - PIB per capta: %.2f reais/habitantes - Densidade Populacional: %.0f habitantes/km2 \n", cidade1, pibPerCapta1, densidadePopulacional1);
+                printf("%s - PIB per capta: %.2f reais/habitantes - Densidade Populacional: %.0f habitantes/km2 \n", cidade2, pibPerCapta2, densidadePopulacional2);
                 soma1 = pibPerCapta1 + densidadePopulacional1;
                 soma2 = pibPerCapta2 + densidadePopulacional2;
             } else if (atributo2 == 6) {
